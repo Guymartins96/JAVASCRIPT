@@ -353,4 +353,4 @@ const markHigherBMI1 = (markBMI1 > johnBMI1);
 console.log(markHigherBMI1);
 
 
-// console.log(markBMI);
+console.log(markBMI);
