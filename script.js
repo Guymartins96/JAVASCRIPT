@@ -354,3 +354,28 @@ console.log(markHigherBMI1);
 
 
 console.log(markBMI);
+
+
+// **************************** Strings and Template Literals ****************************
+
+const myName = "Donald";
+const myJob = "Backend Developer";
+const yearOfBirth = 1888;
+const currentYear = 2023;
+
+const donaldNew = "I'm " + myName + ", a " + (currentYear - yearOfBirth) + " year old " + myJob + "!";
+console.log(donaldNew);
+
+const donalnewer = `I'm ${myName}, a ${currentYear - yearOfBirth} year old ${myJob}!`;
+console.log(donalnewer);
+
+// this is knoown as template literals, 
+
+
+// **************************** Taking Decisions: if / else Statement ****************************
+
+
+
+
+
+
