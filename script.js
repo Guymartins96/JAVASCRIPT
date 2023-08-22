@@ -291,7 +291,7 @@ console.log(obinnaAge <= charlesAge);
 
 const yearNow = 2023;
 const guysAge = yearNow - 1982;
-const chidubemAge = yearNow -1990;
+const chidubemAge = yearNow - 1990;
 
 // console.log(guysAge,  chidubemAge, guysAge + chidubemAge);
 console.log((guysAge + chidubemAge) * 10);
@@ -374,8 +374,66 @@ console.log(donalnewer);
 
 // **************************** Taking Decisions: if / else Statement ****************************
 
+const johnAge = 16;
+
+if (johnAge >= 18) {
+    console.log(`John is eligible to drink alchohol 🍺, because his age is ${johnAge}`);
+}
+else {
+    const yearsLeft = 18 - johnAge;
+    console.log(`John is not eligible to drink alchohol 😢, wait another ${yearsLeft} year(s)`);
+}
+
+let dayOfTheWeek = 'Monday';
+if (dayOfTheWeek === 'Mmonday') {
+    console.log("SIT AT HOME 🏡");
+}
+else {
+    console.log("Write some code!");
+}
 
 
 
+//1.
+if (markBMI > johnBMI) {
+    const markBMIIsHigher = `Mark's BMI which is ${markBMI} is higher than John's BMI which is ${johnBMI}!`;
+    console.log(markBMIIsHigher);
+}
+else {
+    console.log(`John's BMI which is ${johnBMI} is higher than John's BMI which is ${markBMI}!`);
+}
 
+
+//2
+// const markBMIIsHigher1 = `Mark's BMI which is ${markBMI1} is higher than John's BMI which is ${johnBMI1}`;
+// console.log(markBMIIsHigher1);
+
+// **************************** Type Conversion and Coersion ****************************
+// Type conversion is the process of converting a value from one to another
+
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+// this is used to convert String to Number
+console.log(Number(inputYear) + 10);
+
+console.log(Number('Donald'));
+
+console.log(String(23), 23);
+// this is used to convert Number to String
+
+// Type Coersion
+// Type Coersion is when JavaScript coerces or changes a data type by itself
+
+const sum = 35 + 'hello';
+console.log(sum);
+
+console.log('23' - '10' - 3);
+
+console.log('24' / '2');
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n, typeof n);
+
+//Next Class - Truthy and Falsy Values
 
