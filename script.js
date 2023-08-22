@@ -437,3 +437,205 @@ console.log(n, typeof n);
 
 //Next Class - Truthy and Falsy Values
 
+// **************************** Truthy and Falsey Values ****************************
+
+// in javaScript, we have 5 Falsey values: 0, '', undefined, null and NaN
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+
+const moneyMaker = NaN;
+
+if (moneyMaker) {
+    console.log("Buy something nice");
+}
+else {
+    console.log("Save the money!");
+}
+
+// **************************** Logical Operators ****************************
+
+/*
+Logical Operators are used to determine the logic between variables or values
+   && is the AND Operator
+   || is the OR Operator
+   ! is the NOT Operator
+*/
+
+const hasDriversLicense = true;
+const hasGoodVision = true;
+const isTired = false;
+
+
+//For AND Operator
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log('Donald is Eligible to Drive');
+}
+
+else {
+    console.log('Someone else should Drive!')
+}
+
+//For OR Operator
+
+if (hasDriversLicense || hasGoodVision) {
+    console.log('Donald is Eligible to Drive');
+}
+
+else {
+    console.log('Someone else should Drive!')
+}
+
+//For NOT Operator
+
+if (!hasDriversLicense || hasGoodVision) {
+    console.log('Donald is Eligible to Drive');
+}
+
+else {
+    console.log('Someone else should Drive!')
+}
+
+//COMBINATION
+
+if (!hasDriversLicense && hasGoodVision || isTired) {
+    console.log('Donald is Eligible to Drive');
+}
+
+else {
+    console.log('Someone else should Drive!');
+}
+
+
+/* Coding Challange 3 - If Statements and Opeartors
+ There are two football teams, Manchester and Barcelona. They compete against each other 3 times. The team with the highest average score will win the trophy!
+
+ 1. Calculate the average score for each team using the test data below.
+
+ 2. Compare the average scores of the teams to determine the winner of the competition and display it on the console. Remember to account for a possible draw, where both teams have the same average score.
+
+ 3. BONUS 1: Introduce a minimum score requirement of 100. According to this rule, a team can only win if it has a higher score than the other team and a score of at least 100 points. Hint: Use a logical operator to test for the minimum score, along with multiple else-if blocks. 😉
+
+ 4. BONUS 2: The minimum score requirement also applies to a draw. A draw will only occur if both teams have the same score and both teams have a score greater than or equal to 100 points. Otherwise, neither team wins the trophy.
+
+ TEST DATA: Manchester scores 96, 108, and 89. Barcelona scores 88, 91, and 110.
+ TEST DATA BONUS 1: Manchester scores 97, 112, and 101. Barcelona scores 109, 95, and 123.
+ TEST DATA BONUS 2: Manchester scores 97, 112, and 101. Barcelona scores 109, 95, and 106.
+ GOOD LUCK! 😀
+
+
+ // Step 1
+ const manchesterScore = (96 + 108 + 89) / 3;
+ const barcelonaScore = (88 + 91 + 110) / 3;
+
+ console.log(manchesterScore, barcelonaScore);
+
+
+ // Step 2
+ if(manchesterScore > barcelonaScore){
+     console.log("Manchester wins the Trophy 🏆");
+ }
+ else if(barcelonaScore > manchesterScore){
+     console.log("Barcelona wins the Trophy 🏆");
+ }
+ else if(manchesterScore === barcelonaScore){
+     console.log("It's a Draw!");
+ }
+
+ // Step 3
+ const manchesterScore2 = (97 + 112 + 101) / 3;
+ const barcelonaScore2 = (109 + 95 + 123) / 3;
+ console.log(manchesterScore2, barcelonaScore2);
+
+
+ if(manchesterScore2 > barcelonaScore2 && manchesterScore2 >= 100){
+     console.log("Manchester wins the Trophy 🏆");
+ }
+ else if(barcelonaScore2 > manchesterScore2 && barcelonaScore2 >= 100){
+     console.log("Barcelona wins the Trophy 🏆");
+ }
+ else if(manchesterScore2 === barcelonaScore2 && manchesterScore2 >= 100 && barcelonaScore2 >= 100){
+     console.log("Both Teams win the Trophy 🏆");
+ }
+ else{
+     console.log("Nobody wins the Trophy 😭");
+ }
+
+ */
+
+
+1.
+const manchesterAverageScore = (96 + 108 + 89) / 3;
+const barcelonaAverageScore = (88 + 91 + 110) / 3;
+console.log(manchesterAverageScore, barcelonaAverageScore);
+
+
+2.
+if (manchesterAverageScore > barcelonaAverageScore)
+
+    console.log('Manchester is the Winner');
+
+else if (barcelonaAverageScore > manchesterAverageScore)
+
+    console.log('Barcelona is the Winner');
+
+else {
+    console.log('Winner is Undetermined yet!')
+}
+
+
+3.
+const manchesterAverageScore1 = ((97 + 112 + 101) / 3);
+const barcelonaAverageScore1 = ((109 + 95 + 123) / 3);
+const matchMinimumScore = 100;
+
+if ((manchesterAverageScore1 > barcelonaAverageScore1) && (manchesterAverageScore1 >= matchMinimumScore))
+
+    console.log('Manchester is the Winner');
+
+else if ((barcelonaAverageScore1 > manchesterAverageScore1) && (barcelonaAverageScore1 >= matchMinimumScore))
+    console.log('Barcelona is the Winner');
+
+else if ((barcelonaAverageScore1 === manchesterAverageScore1) && (manchesterAverageScore1 >= matchMinimumScore) && (barcelonaAverageScore1 >= matchMinimumScore))
+    console.log('Both Team wins the Trophy');
+
+else {
+    console.log('Winner is Undetermined yet!')
+}
+
+// console.log(barcelonaAverageScore1);
+
+
+4.
+const manchesterAverageScore2 = ((97 + 112 + 101) / 3);
+const barcelonaAverageScore2 = ((109 + 95 + 106) / 3);
+
+
+if ((manchesterAverageScore2 > barcelonaAverageScore2) && (manchesterAverageScore2 >= matchMinimumScore))
+
+    console.log(`Manchester is the Winner`);
+
+else if ((barcelonaAverageScore2 > manchesterAverageScore2) && (barcelonaAverageScore2 >= matchMinimumScore))
+
+    console.log('Barcelona is the Winner');
+
+
+else if ((manchesterAverageScore2 == barcelonaAverageScore2) && (manchesterAverageScore2 && barcelonaAverageScore2) >= matchMinimumScore)
+
+    //OPTIONS
+    // else if ((barcelonaAverageScore2 == manchesterAverageScore2) && ((barcelonaAverageScore2 >= matchMinimumScore) && (barcelonaAverageScore2 >= matchMinimumScore)))
+
+    // else if ((manchesterAverageScore2 == barcelonaAverageScore2) && (manchesterAverageScore2 >= matchMinimumScore) && (barcelonaAverageScore2 >= matchMinimumScore))
+
+    console.log(`This match is a Draw`);
+
+else {
+    console.log('Winner is Undetermined yet!')
+}
+
+console.log(barcelonaAverageScore2)
