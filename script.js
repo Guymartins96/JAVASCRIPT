@@ -1,5 +1,7 @@
 //+++++++++ Values and Variables ++++++++++++++
 console.log("Hello World!");
+document.write('Hello World');
+// window.alert('Hello World');
 
 let firstName = "Guy";
 console.log(firstName);
@@ -627,6 +629,7 @@ else if ((barcelonaAverageScore2 > manchesterAverageScore2) && (barcelonaAverage
 
 else if ((manchesterAverageScore2 == barcelonaAverageScore2) && (manchesterAverageScore2 && barcelonaAverageScore2) >= matchMinimumScore)
 
+
     //OPTIONS
     // else if ((barcelonaAverageScore2 == manchesterAverageScore2) && ((barcelonaAverageScore2 >= matchMinimumScore) && (barcelonaAverageScore2 >= matchMinimumScore)))
 
@@ -638,4 +641,200 @@ else {
     console.log('Winner is Undetermined yet!')
 }
 
-console.log(barcelonaAverageScore2)
+console.log(barcelonaAverageScore2);
+
+// **************************** The Switch Statement ****************************
+const day = "Sunday"
+
+switch (day) {
+    case 'Monday':
+        console.log('Sit at Home')
+        break;
+    case 'Tuesday':
+        console.log('Attend KODEX class');
+        break;
+    case 'Wednesday':
+        console.log('Sleep');
+        break;
+    case 'Thursday':
+        console.log('Watch Movies');
+        break;
+    case 'Friday':
+        console.log('Go to the Club');
+        break;
+    case 'Saturday':
+        console.log('Clean up the house');
+        break;
+    case 'Sunday':
+        console.log('Thank God, go to Church');
+        break;
+    default:
+        console.log("Don't do anything");
+}
+
+// ASSIGNMENT 1: Express the Switch STatement in an if, else if, else statement
+
+
+const day2 = 'Monday';
+
+if (day2 === 'Monday') {
+    console.log('Sit at Home');
+}
+else if (day2 === 'Tuesday') {
+    console.log('Attend KODEX class');
+}
+else if (day2 === 'Wednesday') {
+    console.log('Sleep');
+}
+
+else if (day2 === 'Thursday') {
+    console.log('Watch Movies');
+}
+
+else if (day2 === 'Friday') {
+    console.log('Go to the Club');
+}
+
+else if (day2 === 'Saturday') {
+    console.log('Clean up the house');
+}
+
+else if (day2 === 'Sunday') {
+    console.log('Thank God, go to Church');
+}
+
+else {
+    console.log("Don't do anything");
+}
+
+// **************************** ADDITIONAL CLASS BY MISS START ****************************
+
+// let dayofweek = 1;
+// switch (dayofweek) {
+//     case 1:
+//         document.write('Sunday');
+//         break;
+//     case 2:
+//         document.write('Monday');
+//         break;
+//     case 3:
+//         document.write('Tuesday')
+//         break;
+//     case 4:
+//         document.write('Wednesday');
+//         break;
+//     case 5:
+//         document.write('Thursday');
+//         break;
+//     case 6:
+//         document.write('Friday')
+//         break;
+
+//     case 7:
+//         document.write('Saturday');
+//         break;
+
+//     default:
+//         document.write('Not a valid day');
+//         break;
+
+// }
+// **************************** ADDITIONAL CLASS BY MISS END ****************************
+
+
+
+// **************************** NEXT CLASS: The Ternary Operator ****************************
+
+// --------------------------------------- Tasks (22-08-23) -----------------------------------------------------
+
+// Express the Switch Statement in an If else if else condition
+
+
+// ************************************** The Ternary Operator ************************************************
+////////////////////////////////////
+// Coding Challenge #4
+
+/*
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+
+GOOD LUCK 😀
+*/
+
+
+// SOLUTION
+let bill = 430;
+let tipOne = 15 / 100;
+let tipTwo = 20 / 100;
+
+let billTipOne = bill * tipOne;
+let billTipTwo = bill * tipTwo;
+
+let show;
+
+show = bill >= 50 && bill <= 300 ? `the bill is ${bill} and the tip is ${billTipOne}, then your total bill ${bill + billTipOne}` : (bill >= 301 ? `Tthe bill is ${bill} and the tip is ${billTipTwo}, then your total bill ${bill + billTipTwo}` : "You have no Tip")
+
+console.log(show);
+
+
+let age10 = 4;
+if (age10 <= 3) {
+    document.write("Preschool");
+    console.log("Preschool");
+
+} else {
+    document.write("Nursery School");
+    console.log("Nursery School");
+}
+
+
+
+// **************************** LOOP ****************************
+
+//LOOP: FOR, WHILE LOOP, DO WHILE LOOP, FOREACH
+// for(Initialization; condition; Increment/Decrement){
+//    What should be outputed
+// }
+
+
+// a way of writing
+let a10;
+for(a=0; a<=10; a++){
+    document.write(a+"<br>");
+}
+
+// another way of writing
+
+let b=0;
+for(; b<=10; b++){
+    document.write(b+"<br>");
+}
+
+// another way of writing
+
+for(let c=0; c<=10; c++){
+    document.write(c+"<br>");
+}
+
+// DO WHILE LOOP
+
+let d=20;
+do{
+    document.write(d + "<br>")
+    d++
+}while(d<=10)
+
+// WHILE LOOP
+
+let e = 1;
+while(a<=10){
+
+document.write(e+ ' ')
+}
