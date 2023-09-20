@@ -426,16 +426,19 @@ console.log(String(23), 23);
 // Type Coersion
 // Type Coersion is when JavaScript coerces or changes a data type by itself
 
-const sum = 35 + 'hello';
-console.log(sum);
+// ##
+// const sum = 35 + 'hello';
+// console.log(sum);
 
-console.log('23' - '10' - 3);
+// console.log('23' - '10' - 3);
 
-console.log('24' / '2');
+// console.log('24' / '2');
 
-let n = '1' + 1;
-n = n - 1;
-console.log(n, typeof n);
+// let n = '1' + 1;
+// n = n - 1;
+// console.log(n, typeof n);
+
+// ##
 
 //Next Class - Truthy and Falsy Values
 
@@ -806,35 +809,306 @@ if (age10 <= 3) {
 
 // a way of writing
 let a10;
-for(a=0; a<=10; a++){
-    document.write(a+"<br>");
+for (a = 0; a <= 10; a++) {
+    document.write(a + "<br>");
 }
 
 // another way of writing
 
-let b=0;
-for(; b<=10; b++){
-    document.write(b+"<br>");
+let b = 0;
+for (; b <= 10; b++) {
+    document.write(b + "<br>");
 }
 
 // another way of writing
 
-for(let c=0; c<=10; c++){
-    document.write(c+"<br>");
+for (let c = 0; c <= 10; c++) {
+    document.write(c + "<br>");
 }
 
 // DO WHILE LOOP
 
-let d=20;
-do{
+let d = 20;
+do {
     document.write(d + "<br>")
     d++
-}while(d<=10)
+} while (d <= 10)
 
 // WHILE LOOP
 
 let e = 1;
-while(a<=10){
+while (e <= 10) {
+    document.write(e + '<br>');
+    e++;
+}
 
-document.write(e+ ' ')
+// CODING CHALLENGE - Display 100 to 90 using 'for loop' and 'while loop'
+
+// FOR LOOP
+for (let h = 100; h >= 90; h--) {
+    document.write(h + "<br>");
+}
+
+// WHILE LOOP
+let g = 100;
+while (g >= 90) {
+    document.write(g + '<br>');
+    g--;
+}
+
+// **************************** FUNCTION ****************************
+
+
+function name1() {
+    document.write("Hello");
+}
+name1();
+
+function name2() {
+    return "Welcome";
+}
+document.write(name2());
+
+function sum(num1, num2, num3, num4) {
+    return num1 + num2 + num3 + num4;
+}
+document.write(sum(16, 45, 70, 12));
+
+// CLASSWORK
+// CREATE A FUNCTION THAT ACCEPTS NAME, COURSE, AND EMAIL,
+// DISPLAY THEM LIKE THIS
+// NAME
+// COURSE
+// EMAIL
+
+// ##
+// function name10(){
+//     document.write("<br>");
+//     document.write("OKOYE GUY");
+// }
+// name10();
+
+// function name11(){
+//     document.write("<br>");
+//     document.write("FULLSTACK");}
+// name11();
+
+// function name12(){
+//     document.write("<br>");
+//     document.write("guymartins96@gmail.com");}
+// name12();
+
+// ##
+
+// CORRECTION
+
+
+
+// ##
+// function details(name,course,email){
+
+//     if(typeof name === "string" && typeof course === "string" && typeof email === "string"){
+//     return `<br> Name: ${name} <br> Course: ${course} <br> Email: ${email}`;
+//     }
+//     else{
+//         return "Only Strings are allowed";
+//     }
+
+// }
+// document.write(details("EZEH NZUBE", "FULLSTACK", "abc@xyz.com"));
+// ##
+
+
+
+// CODING CHALLENGE
+// CREATE A FUNCTION TO ADD 2 NUMBERS
+// THE FUNCTION SHOULD HAVE AN ERROR MESSAGE IF YOU TYPE IN ANY VALUE THAT IS NOT A NUMBER
+
+// ##
+// function addy(addy1,addy2){
+// if (typeof addy1 === "number" && typeof addy2 === "number"){
+// return "<br>" + "Sum: " + (addy1 + addy2);
+// }
+// else{
+//     return "Only numbers are allowed";
+// }
+// }
+// document.write(addy(50,50));
+// ##
+
+// **************************** ARRAYS ****************************
+
+// let names = ["Nzube", "Chekwube", "Ken", "Chukwuemeka", "samuel", "Victor", "Gift", "Ozor", "Charles", "Jasper", "Nwaeze", "Kingsley", "Divine", "Culture", "Guy", "Joy"];
+// document.write(names.length);
+
+// A WAY TO WRITE
+// for (let m = 0; m < names.length; m++) {
+//     document.write(names[m] + "<br>");
+// }
+
+// ANOTHER WAY TO WRITE
+// for (let name of names) {
+//     document.write(name + "<br>");
+// }
+
+// ASSIGNMENT
+
+// FUNCTION TO ADD, MULTIPLY, DIVIDE, SUBSTRACT 2 NUMBERS
+// VALUES THAT ARE NOT NUMBERS SHOULDN'T BE ALLOWED
+// CREATE AN ARRAY OF 5 ITEMS USE "FOR" LOOP AND "FOR OF" LOOP
+// TO LOOP THROUGH THE ITEMS ON THE LOOP
+
+// CORRECTION
+// ADDITION:ß
+// function add(num1, num2) {
+//     if (typeof num1 === "number" && typeof num2 === "number") {
+//         return "<br> Sum:" + (num1 + num2);
+//     }
+//     else {
+//         return "Only numbers are allowed";
+//     }
+// }
+// document.write(add(50, 50));
+
+// SUBTRACTION
+// function sub(num1, num2) {
+//     if (typeof num1 === "number" && typeof num2 === "number") {
+//         return "<br> Difference:" + (num1 - num2);
+//     }
+//     else {
+//         return "Only numbers are allowed";
+//     }
+// }
+// document.write(sub(50, 50));
+
+
+// DIVISION
+// function div(num1, num2) {
+//     if (typeof num1 === "number" && typeof num2 === "number") {
+//         return "<br> Divide:" + (num1 / num2);
+//     }
+//     else {
+//         return "Only numbers are allowed";
+//     }
+// }
+// document.write(div(50, 50));
+
+
+// MULTIPLICATION
+// function multiply(num1, num2) {
+//     if (typeof num1 === "number" && typeof num2 === "number") {
+//         return "<br> Product:" + (num1 * num2);
+
+//     }
+//     else {
+//         return "Only numbers are allowed";
+
+//     }
+// }
+// document.write(multiply(50, 50));
+
+
+// **************************** ARRAYS FUNCTIONS ****************************
+
+// let names = ["Nzube", "Chekwube", "Ken", "Chukwuemeka", "Samuel", "Victor", "Gift", "Ozor", "Charles", "Jasper", "Nwaeze", "Kingsley", "Divine", "Culture", "Guy", "Joy"];
+
+//PUSH - used to add value to the end of an array
+// names.push("Ifeanyi");
+// for (let name of names) {
+//     document.write("<br>" + name);
+
+
+// ANOTHER WAY AND SHOULD NOT BE USED
+// names[17] = "imaginary";
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+
+// ANOTHER WAY
+// names[names.length] = "Another Imaginary";
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+
+// POP - to remove the last item from an array
+
+// names.pop();
+// document.write("<br> <br>")
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+
+// SHIFT - used to remove an item from the top of an array
+
+// names.shift();
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+//UNSHIFT - to add an item to the top of an array
+// names.unshift("Barnabas");
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+
+//SORT - to sort the items on an array in an alphabetical order (ascending order)
+
+// names.sort();
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+// document.write("<br> <br>");
+
+// REVERSE - to sort the items on an array in a DESCENDING order
+
+// names.reverse();
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+
+// SPLICE - to add a new item on a particular position on an array
+
+// names.splice(4,0, "Michael", "Jasmine", "Flavour", "Grace");
+// for (let name of names) {
+//     document.write("<br>" + name);
+// }
+
+// CONCAT - to join two or more arrays together
+document.write("<br> <br>")
+
+let javascript_names = ["Nzube", "Chekwube", "Ken", "Chukwuemeka", "Samuel", "Victor", "Gift", "Ozor"];
+
+let php_names = ["Charles", "Jasper", "Nwaeze", "Kingsley", "Divine", "Culture", "Guy", "Joy"];
+
+let laravel_names = ["James", "Jasmine", "Juliet"];
+
+let kodex_students = javascript_names.concat(php_names, laravel_names);
+for (let student of kodex_students) {
+    document.write(student + "<br>");
+}
+
+//CODING CHALLENGE
+// CREATE 2 ARRAYS WITH 2 ITEMS EACH
+// USE POP, PUSH AND CONCAT
+
+let apple_devices = ["IPHONE 14", "IPHONE 15"];
+let samsung_devices = ["ZFOLD", "S-ULTRA"];
+
+// CONCAT
+let smart_devices = apple_devices.concat(samsung_devices);
+for (let devices of smart_devices) {
+    document.write(devices + "<br>");
+}
+
+// POP
+smart_devices.pop();
+document.write("<br> <br>")
+for (let devices of smart_devices) {
+    document.write(devices + "<br>");
+}
+
+//PUSH
+smart_devices.push("S-ULTRA");
+document.write("<br> <br>")
+for (let devices of smart_devices) {
+    document.write(devices + "<br>");
 }
