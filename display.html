@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="showdiv1">Div 1</button>
+    <button id="showdiv2">Div 2</button>
+
+    <div id="div1" style="display: none; background-color: aquamarine; ">
+        <p>Hello</p>
+    </div>
+
+    <div id="div2" style="display: none; background-color: blueviolet; ">
+        <p>Hello</p>
+    </div>
+
+    <script>
+        let btn1 = document.getElementById("showdiv1");
+        let btn2 = document.getElementById("showdiv2");
+        let div1 = document.getElementById("div1");
+        let div2 = document.getElementById("div2");
+
+        btn1.addEventListener("click", () => {
+            div1.style.display="block";
+            div2.style.display="none";
+        })
+
+        btn2.addEventListener("click", () => {
+            div2.style.display="block";
+            div1.style.display="none";
+        })
+
+    </script>
+</body>
+
+</html>

@@ -65,13 +65,13 @@ console.log(year, typeof year);
 
 // An empty value has nothing to do with "undefined" 
 
-let car = '';
-console.log(typeof car);
+// let car = '';
+// console.log(typeof car);
 
 
 // When adding a number and a String, javeScript will treat the number as a String.
-let vehicle = 16 + 4 + "Volvo";
-console.log(vehicle, typeof vehicle);
+// let vehicle = 16 + 4 + "Volvo";
+// console.log(vehicle, typeof vehicle);
 
 
 /* Null
@@ -80,8 +80,8 @@ In JavaScript, Null is nothing. It is supposed to be something that doesnt exist
 the typeof of null is object
 */
 
-let money = null;
-console.log(money, typeof money);
+// let money = null;
+// console.log(money, typeof money);
 
 
 
@@ -1073,42 +1073,138 @@ document.write(sum(16, 45, 70, 12));
 // }
 
 // CONCAT - to join two or more arrays together
-document.write("<br> <br>")
+// document.write("<br> <br>")
 
-let javascript_names = ["Nzube", "Chekwube", "Ken", "Chukwuemeka", "Samuel", "Victor", "Gift", "Ozor"];
+// let javascript_names = ["Nzube", "Chekwube", "Ken", "Chukwuemeka", "Samuel", "Victor", "Gift", "Ozor"];
 
-let php_names = ["Charles", "Jasper", "Nwaeze", "Kingsley", "Divine", "Culture", "Guy", "Joy"];
+// let php_names = ["Charles", "Jasper", "Nwaeze", "Kingsley", "Divine", "Culture", "Guy", "Joy"];
 
-let laravel_names = ["James", "Jasmine", "Juliet"];
+// let laravel_names = ["James", "Jasmine", "Juliet"];
 
-let kodex_students = javascript_names.concat(php_names, laravel_names);
-for (let student of kodex_students) {
-    document.write(student + "<br>");
-}
+// let kodex_students = javascript_names.concat(php_names, laravel_names);
+// for (let student of kodex_students) {
+//     document.write(student + "<br>");
+// }
 
 //CODING CHALLENGE
 // CREATE 2 ARRAYS WITH 2 ITEMS EACH
 // USE POP, PUSH AND CONCAT
 
-let apple_devices = ["IPHONE 14", "IPHONE 15"];
-let samsung_devices = ["ZFOLD", "S-ULTRA"];
+// let apple_devices = ["IPHONE 14", "IPHONE 15"];
+// let samsung_devices = ["ZFOLD", "S-ULTRA"];
 
 // CONCAT
-let smart_devices = apple_devices.concat(samsung_devices);
-for (let devices of smart_devices) {
-    document.write(devices + "<br>");
-}
+// let smart_devices = apple_devices.concat(samsung_devices);
+// for (let devices of smart_devices) {
+//     document.write(devices + "<br>");
+// }
 
 // POP
-smart_devices.pop();
-document.write("<br> <br>")
-for (let devices of smart_devices) {
-    document.write(devices + "<br>");
-}
+// smart_devices.pop();
+// document.write("<br> <br>")
+// for (let devices of smart_devices) {
+//     document.write(devices + "<br>");
+// }
 
 //PUSH
-smart_devices.push("S-ULTRA");
-document.write("<br> <br>")
-for (let devices of smart_devices) {
-    document.write(devices + "<br>");
+// smart_devices.push("S-ULTRA");
+// document.write("<br> <br>")
+// for (let devices of smart_devices) {
+//     document.write(devices + "<br>");
+// }
+
+
+// **************************** OBJECTS ****************************
+// A WAY OF CREATING AN OBJECT
+// let person ={
+//     name:"Gift",
+//     age:35,
+//     height:"5.5ft",
+//     color:"caramel"
+// }
+
+// ANOTHER WAY OF CREATING AN OBJECT
+// let car = new Object();
+// car.name = "Benz";
+// car.model = "Peugeout";
+
+
+// document.write ("Name: " + person.name + "<br>Age: "+ person["age"]);
+// document.write ("<br>Name: " + person.name + "<br>Age: "+ person.age);
+// document.write ("<br>Car Name: " + car.name);
+
+// Here, the property is a function
+// let calculator = {
+//     add: function(num1,num2){
+//         return `<br>Sum: ${num1 + num2}`;
+//     },
+//     sub: function(num1,num2){
+//         return `<br>Sub: ${num1-num2}`;
+//     }
+// }
+
+// USED TO ADD VALUE/PROPERTY TO AN ALREADY EXISTING OBJECT
+// calculator.multiply = function(num1,num2){
+//     return `<br>Product: ${num1*num2}`;
+// }
+
+// document.write(calculator.sub(78,12) + calculator.add(12,13) + calculator.multiply(15,11));
+
+
+// delete person.name;
+// document.write (person.name);
+
+// CODING CHALLENGE
+// CREATE AN OBJECT OF DOG ADD 3 PROPERTIES
+// CREATE AN OBJECT OF BANK add function for account creation, makedeposit
+
+// DOG
+let dog = new Object();
+dog.name = "Murphy"
+dog.breed = "Rotweiler"
+dog.coat = "black";
+
+for (let property in dog) {
+    document.write(property + ":" + dog[property] + "<br>");
 }
+
+document.write("<br>Name: " + dog.name + "<br>Breed: " + dog.breed + "<br>Coat: " + dog.coat);
+
+// BANK
+// ACCOUNT CREATION
+let bank = {
+    account_creation: function (name, bvn, email) {
+        return `<br>Name: ${name} 
+        <br>BVN:  ${bvn}
+        <br>Email: ${email}`
+    },
+
+    account_deposit: function()
+
+
+
+
+}
+//     bvn:function(bvn1){
+//         return `<br>BVN: ${bvn1}`;
+// },
+//     account_number:function(account1){
+//         return `<br>Account Number: ${account1}`;
+// },
+//     gender:function(male1){
+//         return `<br>Gender: ${male1}`;
+// },
+//     nationality: function(nation1){
+//         return `<br>Nationality: ${nation1}`;
+// },
+// }
+// document.write(bank.name("OKONKWO ANGELA"));
+// document.write(bank.bvn("825371912"));
+// document.write(bank.account_number("47949069575"));
+
+// document.write(bank.account_creation("OKONKWO ANGELA", "825371912", "47949069575"));
+
+// ASSIGNMENT
+// CREATE A MINI BANK
+// WITH CREATEACCOUNT BUTTON, MAKE DEPOSIT BUTTON, WITHDRAW BUTTON
+// WHEN I CLICK ON  CREATE ACCOUNT BUTTON SHOW ME A DIV THAT CONTAINS A 
